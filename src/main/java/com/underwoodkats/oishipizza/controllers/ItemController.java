@@ -44,4 +44,10 @@ public class ItemController {
         itemRepository.deleteAll();
         return new ResponseEntity(HttpStatus.OK);
     }
+
+    @DeleteMapping(value = "/delete/{id}")
+    public HttpEntity deleteAllItems(@PathVariable int id) {
+        itemRepository.deleteById(id);
+        return new ResponseEntity(HttpStatus.OK);
+    }
 }
