@@ -63,7 +63,7 @@ public class OrderController {
             consumes = {"application/json"})
     public HttpEntity saveOrder(@RequestBody OrderRequest orderRequest) {
 
-        Set<Integer> itemsIDs = orderRequest.getItemsAm ount().keySet();
+        Set<Integer> itemsIDs = orderRequest.getItemsAmount().keySet();
         List<OrderItem> orderItems = new ArrayList<>();
 
         for (Integer itemID : itemsIDs) {

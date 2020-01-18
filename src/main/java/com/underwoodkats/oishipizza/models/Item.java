@@ -47,7 +47,7 @@ public class Item {
             cascade = CascadeType.ALL,
             fetch = FetchType.LAZY,
             orphanRemoval = true)
-    private Set<OrderItem> recipeIngredients;
+    private Set<OrderItem> orderItems;
 
     public Item(String title, Double priceDollar, Item.Type type, String description, String imagePath) {
         this.title = title;
