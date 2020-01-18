@@ -17,7 +17,7 @@ public class ServerConfig {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(true);
-        config.addAllowedOrigin("https://polar-spire-76257.herokuapp.com");
+        config.addAllowedOrigin("*");
         config.setAllowedHeaders(
                 Collections.unmodifiableList(
                         Arrays.asList("Authorization", "Cache-Control", "Content-Type")));
