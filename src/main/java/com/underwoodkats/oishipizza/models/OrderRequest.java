@@ -2,9 +2,14 @@ package com.underwoodkats.oishipizza.models;
 
 import lombok.Data;
 
-import java.util.Date;
 import java.util.Map;
 
+
+/**
+ * This class descries an object that server receive from the
+ * party that requests information about the order.
+ *
+ */
 @Data
 public class OrderRequest {
 

@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * This controller provide endpoints to process data about items.
+ */
 @Controller
 @RequestMapping(path = "/menu")
 public class ItemController {
@@ -18,11 +21,19 @@ public class ItemController {
     @Autowired
     private ItemRepository itemRepository;
 
+    /**
+     * This endpoint returns List of all items that we store.
+     * @return ResponseEntity<List<Item>>
+     */
     @GetMapping(path = "/all")
     public ResponseEntity<List<Item>> getAllItems() {
         return new ResponseEntity<>(itemRepository.findAll(), HttpStatus.OK);
     }
 
+    /**
+     * This endpoint let the party save a new item.
+     * @return HttpEntity
+     */
     @PostMapping(path = "/save")
     public HttpEntity saveItem(@RequestBody Item item) {
         if (item != null) {
@@ -39,12 +50,21 @@ public class ItemController {
         }
     }
 
+    /**
+     * This endpoint delete all items that we store.
+     * @return HttpEntity
+     */
     @DeleteMapping(value = "/delete")
     public HttpEntity deleteAllItems() {
         itemRepository.deleteAll();
         return new ResponseEntity(HttpStatus.OK);
     }
 
+    /**
+     * This endpoint delete one specific item by its id.
+     * @param id - identification of the item that has to be deleted.
+     * @return HttpEntity
+     */
     @DeleteMapping(value = "/delete/{id}")
     public HttpEntity deleteAllItems(@PathVariable int id) {
         itemRepository.deleteById(id);

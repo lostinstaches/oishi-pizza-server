@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.io.IOException;
 
+/**
+ * This controller provide endpoint to return the image to the party that requests it.
+ */
 @Controller
 @RequestMapping(path = "/resources")
 public class ResourcesController {

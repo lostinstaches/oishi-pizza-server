@@ -10,6 +10,10 @@ import org.springframework.web.filter.CorsFilter;
 import java.util.Arrays;
 import java.util.Collections;
 
+/**
+ * This class describes server configuration such as what methods are allowed and which party
+ * server can response and etc.
+ */
 @Configuration
 public class ServerConfig {
     @Bean

@@ -1,12 +1,16 @@
 package com.underwoodkats.oishipizza.models;
 
 import lombok.Data;
-import org.springframework.data.annotation.CreatedDate;
 
-import javax.persistence.Column;
 import java.util.Date;
 import java.util.Map;
 
+
+/**
+ * This class descries an object that server sends to the
+ * party that requests information about the order.
+ *
+ */
 @Data
 public class OrderClient {
 

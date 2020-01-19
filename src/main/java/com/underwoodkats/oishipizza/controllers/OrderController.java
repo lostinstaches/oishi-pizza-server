@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.*;
 
+/**
+ * This controller provide endpoints to process data about order.
+ */
 @RestController
 @RequestMapping("/order")
 public class OrderController {
@@ -25,6 +28,10 @@ public class OrderController {
     @Autowired
     private ItemRepository itemRepository;
 
+    /**
+     * This endpoint returns the list of all orders in a suitable form for the client.
+     * @return ResponseEntity<List<OrderClient>>
+     */
     @GetMapping(path = "/history")
     public ResponseEntity<List<OrderClient>> getAllOrders() {
 
@@ -58,6 +65,12 @@ public class OrderController {
         return new ResponseEntity<>(orderClientList, HttpStatus.OK);
     }
 
+    /**
+     * This endpoint lets the party save a new order.
+     * @param orderRequest - object that contains all necessary information to proceed the order
+     *                     and save it.
+     * @return HttpEntity
+     */
     @PostMapping(
             value = "/save",
             consumes = {"application/json"})
@@ -87,5 +100,14 @@ public class OrderController {
                         orderRequest.getDeliveryPriceDollar(),orderItemsArray);
         orderRepository.save(order);
         return new ResponseEntity(HttpStatus.OK);
+    }
+
+    /**
+     * This endpoint returns the list of all relations between orders and items.
+     * @return ResponseEntity<List<OrderItem>>
+     */
+    @GetMapping(path = "/order-items")
+    public ResponseEntity<List<OrderItem>> getAllOrderItemRelations() {
+        return new ResponseEntity<>(orderItemRepository.findAll(), HttpStatus.OK);
     }
 }

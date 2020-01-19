@@ -11,7 +11,12 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-
+/**
+ * This entity describes an Order object.
+ * This entity has many to many relation with entity Item.
+ * This entity contain the information that is necessary for the delivery person.
+ *
+ */
 @Data
 @Entity(name="Orders")
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "orderItems"})
