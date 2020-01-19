@@ -22,6 +22,7 @@ public class ServerConfig {
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(true);
         config.addAllowedOrigin("https://polar-spire-76257.herokuapp.com");
+        config.addAllowedOrigin("http://localhost:3000");
         config.setAllowedHeaders(
                 Collections.unmodifiableList(
                         Arrays.asList("Authorization", "Cache-Control", "Content-Type")));
