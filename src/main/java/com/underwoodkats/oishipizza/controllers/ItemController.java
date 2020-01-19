@@ -1,7 +1,6 @@
 package com.underwoodkats.oishipizza.controllers;
 
 import com.underwoodkats.oishipizza.models.Item;
-import com.underwoodkats.oishipizza.repositories.ItemRepository;
 import com.underwoodkats.oishipizza.services.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
