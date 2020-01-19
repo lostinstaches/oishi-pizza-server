@@ -17,12 +17,12 @@ public class ServerConfig {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(true);
-        config.addAllowedOrigin("*");
+        config.addAllowedOrigin("https://polar-spire-76257.herokuapp.com");
         config.setAllowedHeaders(
                 Collections.unmodifiableList(
                         Arrays.asList("Authorization", "Cache-Control", "Content-Type")));
         config.setAllowedMethods(
-                Collections.unmodifiableList(Arrays.asList("GET", "POST", "DELETE", "PATCH")));
+                Collections.unmodifiableList(Arrays.asList("GET", "POST", "DELETE")));
         source.registerCorsConfiguration("/**", config);
 
         FilterRegistrationBean bean = new FilterRegistrationBean(new CorsFilter(source));
