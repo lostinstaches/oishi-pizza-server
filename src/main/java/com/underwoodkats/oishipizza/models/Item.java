@@ -12,7 +12,6 @@ import java.util.Set;
  * This entity has many to many relation with entity Order.
  * Item is a abstract definition for all elements that could be in the menu,
  * such as pizzas, beverages, desserts and others.
- *
  */
 @Data
 @Entity

@@ -26,12 +26,13 @@ public class ItemService {
         itemRepository.deleteAll();
     }
 
-    public void deleteItemById(int id){
+    public void deleteItemById(int id) {
         itemRepository.deleteById(id);
     }
 
     /**
      * This method save item in the repository if item is valid.
+     *
      * @param item - element that will be proceed
      * @return true if item has been saved and false otherwise.
      */
@@ -46,6 +47,7 @@ public class ItemService {
     /**
      * This method check fields of the item that should be present
      * in order to save the item.
+     *
      * @param item - element that will be proceed
      * @return true if item is valid and false if it is not.
      */

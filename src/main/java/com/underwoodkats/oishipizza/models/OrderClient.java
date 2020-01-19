@@ -9,7 +9,6 @@ import java.util.Map;
 /**
  * This class descries an object that server sends to the
  * party that requests information about the order.
- *
  */
 @Data
 public class OrderClient {

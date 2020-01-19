@@ -6,9 +6,8 @@ import java.util.Map;
 
 
 /**
- * This class descries an object that server receive from the
+ * This class descries an object that server receives from the
  * party that requests information about the order.
- *
  */
 @Data
 public class OrderRequest {

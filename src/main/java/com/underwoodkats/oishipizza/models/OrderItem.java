@@ -13,7 +13,6 @@ import java.util.Objects;
  * This entity describes an relational object between such entities as Item and Order.
  * This entity contain the information that is necessary for for the restaurant personal
  * in order to prepare the order.
- *
  */
 @Getter
 @Setter
